@@ -1,0 +1,15 @@
+*.pyc
+__pycache__
+.git
+.gitignore
+.DS_Store
+.env
+.vscode
+.idea
+node_modules
+build
+dist
+.dockerignore
+.env.dev
+.env.prod
+.env.prod.db
