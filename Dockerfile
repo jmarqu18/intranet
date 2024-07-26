@@ -27,6 +27,9 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
     && apt-get install -y nodejs
 
+# Update npm
+RUN npm install -g npm && npm install -g npm@latest
+
 # Copy project
 COPY . /app/
 
