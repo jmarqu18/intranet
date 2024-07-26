@@ -35,3 +35,7 @@ black==23.12.1
 # For testing
 pytest==7.4.4
 pytest-django==4.7.0
+
+# For UI
+django-tailwind==3.8.0
+cookiecutter==2.6.0

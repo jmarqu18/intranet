@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     "debug_toolbar",
     "corsheaders",
     "social_django",
+    "tailwind",
+    "theme",
     # Local apps
 ]
 
@@ -157,7 +159,7 @@ INTERNAL_IPS = ["127.0.0.1"]
 import socket
 
 hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
-INTERNAL_IPS += [ip[:-1] + "1" for ip in ips]
+INTERNAL_IPS += [".".join(ip.split(".")[:-1] + ["1"]) for ip in ips]
 
 
 # CORS settings
@@ -191,3 +193,7 @@ LOGOUT_REDIRECT_URL = "/"
 SOCIAL_AUTH_GOOGLE_OAUTH2_WHITELISTED_DOMAINS = [
     "10code.es"
 ]  # Restringe a usuarios de 10code.es
+
+
+# Tailwind settings
+TAILWIND_APP_NAME = "theme"

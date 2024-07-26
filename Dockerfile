@@ -16,11 +16,16 @@ RUN apt-get update && apt-get install -y \
     gcc \
     libpq-dev \
     postgresql-client \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
 COPY requirements.txt /app/
 RUN pip install --upgrade pip && pip install -r requirements.txt
+
+# Install Node.js and npm
+RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash - \
+    && apt-get install -y nodejs
 
 # Copy project
 COPY . /app/
