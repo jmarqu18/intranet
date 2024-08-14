@@ -1,6 +1,6 @@
 *.pyc
 __pycache__
-.git
+.git/
 .gitignore
 .DS_Store
 .env
@@ -13,3 +13,5 @@ dist
 .env.dev
 .env.prod
 .env.prod.db
+*.log
+*.tmp
